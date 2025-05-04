@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pacemaker Overview</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Pacemaker: Overview, Safety & Standards</h1>
+        <nav>
+            <button onclick="scrollToSection('evolution')">1. Evolution & Types</button>
+            <button onclick="scrollToSection('safety')">2. Electrical Safety</button>
+            <button onclick="scrollToSection('standards')">3. Standards</button>
+            <button onclick="scrollToSection('testing')">4. Safety Testing</button>
+        </nav>
+    </header>
+
+    <section id="evolution">
+        <h2>💥 1. Evolution and Types of Pacemakers</h2>
+        <p>📜 The development of pacemakers over the past 60+ years is one of the most important advances in cardiac care.</p>
+        
+        <h3>📜 Evolution of Pacemakers</h3>
+        <ul>
+            <li><strong>1950s — External Pacemakers:</strong> 
+                <ul>
+                    <li>First pacemakers were large, external devices connected to the heart through electrodes inserted into the chest.</li>
+                    <li>They were powered by wall electricity or large batteries.</li>
+                    <li><strong>Example:</strong> In 1958, the first implanted pacemaker by Rune Elmqvist and surgeon Åke Senning failed after a few hours; but it marked the beginning of cardiac pacing.</li>
+                </ul>
+            </li>
+            <li><strong>1960s–1970s — Implantable Pacemakers:</strong> 
+                <ul>
+                    <li>Devices became small enough to implant under the skin.</li>
+                    <li>Early versions used nickel-cadmium rechargeable batteries, but battery life was short.</li>
+                    <li>Devices provided simple fixed-rate pacing.</li>
+                </ul>
+            </li>
+            <li><strong>1980s — Demand / On-Demand Pacemakers:</strong> 
+                <ul>
+                    <li>Pacemakers became “smart” enough to detect when the heart needed pacing.</li>
+                    <li>Demand pacemakers delivered pulses only when needed, conserving battery life and improving efficiency.</li>
+                </ul>
+            </li>
+            <li><strong>1990s — Dual-Chamber and Rate-Responsive Pacemakers:</strong> 
+                <ul>
+                    <li>Devices began pacing both the atria and ventricles.</li>
+                    <li>Rate-responsive pacemakers adjusted heart rate based on body activity, using sensors to detect motion or breathing.</li>
+                </ul>
+            </li>
+            <li><strong>2000s–Present — Advanced, MRI-Safe, Leadless Pacemakers:</strong> 
+                <ul>
+                    <li>Modern pacemakers are smaller, more durable, and MRI-compatible.</li>
+                    <li>Leadless pacemakers (like Medtronic Micra) are directly implanted into the heart without leads or a chest pocket.</li>
+                    <li>Remote monitoring through wireless technology allows doctors to track performance without frequent in-person visits.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>⚙ Two Major Types of Pacemakers (Detailed)</h3>
+        <h4>✅ 1. Single-Chamber Pacemaker</h4>
+        <p><strong>Function:</strong> Stimulates one heart chamber — usually the right ventricle.</p>
+        <p><strong>Indications:</strong> Used when only the ventricles need pacing, for example:</p>
+        <ul>
+            <li>Complete heart block (AV block)</li>
+            <li>Chronic atrial fibrillation with slow ventricular response</li>
+        </ul>
+        <p><strong>How it works:</strong> The device delivers electrical pulses through a lead to the right ventricle. It ensures the ventricle contracts when the natural heart signal is too slow or absent.</p>
+        <p><strong>Limitations:</strong> It does not synchronize atrial and ventricular contractions, which can reduce cardiac efficiency, especially in people with normal atrial activity.</p>
+        
+        <h4>✅ 2. Dual-Chamber Pacemaker</h4>
+        <p><strong>Function:</strong> Stimulates both the right atrium and right ventricle, coordinating their contraction.</p>
+        <p><strong>Indications:</strong> Used in patients with:</p>
+        <ul>
+            <li>AV block</li>
+            <li>Sick sinus syndrome</li>
+            <li>Bradycardia with intact AV conduction</li>
+        </ul>
+        <p><strong>How it works:</strong></p>
+        <ul>
+            <li>One lead is placed in the right atrium.</li>
+            <li>One lead is placed in the right ventricle.</li>
+        </ul>
+        <p>The pacemaker senses and paces both chambers, maintaining the normal atrioventricular sequence (atrium contracts first, pushing blood into the ventricle, followed by ventricular contraction).</p>
+        <p><strong>Advantages:</strong></p>
+        <ul>
+            <li>Better cardiac output</li>
+            <li>Reduced symptoms like fatigue and dizziness</li>
+            <li>Improved exercise tolerance</li>
+            <li>More physiologic heart rhythm</li>
+        </ul>
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMy-mT0OcXttbWtl2g1rZ-8BlgIOr4NeZhA&s" 
+             alt="Safety Testing" 
+             class="diagram" 
+             onclick="openModal('modal-img', this.src)">
+
+        <!-- Modal Structure -->
+        <div id="modal-img" class="modal hidden">
+            <span class="close" onclick="closeModal('modal-img')">&times;</span>
+            <img class="modal-content" id="modal-content-img">
+        </div>
+    </section>
+
+    <section id="safety">
+        <h2>⚡ 2. Electrical Safety in Pacemaker Use (Detailed Explanation)</h2>
+        <p>Pacemakers are life-saving devices, but because they are electronic and implanted in the body, they require special precautions to ensure electrical safety.</p>
+        <p>The key goal is to prevent device malfunction, interference, or patient injury from external electrical or magnetic sources.</p>
+        
+        <h3>🔧 1. Electromagnetic Interference (EMI)</h3>
+        <p><strong>What is EMI?</strong></p>
+        <p>Electromagnetic interference is the disruption of a pacemaker’s normal operation due to external electromagnetic fields.</p>
+        <p><strong>Common sources of EMI:</strong></p>
+        <ul>
+            <li>Mobile phones (especially when held near the chest)</li>
+            <li>Security systems (airport security gates, theft detectors)</li>
+            <li>Microwave ovens (modern ones are generally safe, but caution is still advised)</li>
+            <li>Power tools or welding equipment</li>
+            <li>MRI machines and CT scanners (especially MRI, which uses strong magnetic fields)</li>
+            <li>Large speakers with powerful magnets</li>
+        </ul>
+        <p><strong>Effects of EMI on pacemakers:</strong></p>
+        <ul>
+            <li>Inhibition of pacing pulses (pacemaker stops firing)</li>
+            <li>Triggering inappropriate pacing</li>
+            <li>Switching the device into a backup or noise mode</li>
+            <li>Rarely, permanent damage to the pacemaker circuitry</li>
+        </ul>
+        
+        <h3>🛡 2. Patient Safety Guidelines</h3>
+        <p><strong>To reduce the risk of electrical hazards:</strong></p>
+        <ul>
+            <li><strong>Maintain distance from sources:</strong>
+                <ul>
+                    <li>Keep mobile phones at least 15-20 cm away from the device (use the opposite ear, avoid chest pockets).</li>
+                    <li>Walk steadily through security gates, don’t linger.</li>
+                    <li>Avoid standing close to high-voltage equipment or large magnetic fields.</li>
+                </ul>
+            </li>
+            <li><strong>Medical and dental procedures:</strong>
+                <ul>
+                    <li>Inform doctors and dentists about the pacemaker before procedures.</li>
+                    <li>MRI scans are contraindicated with older pacemakers; newer MRI-conditional models are safer but require careful planning.</li>
+                    <li>Electrosurgery tools (used in surgeries) may need special settings or precautions.</li>
+                </ul>
+            </li>
+            <li><strong>Home appliances:</strong>
+                <ul>
+                    <li>Modern microwaves, TVs, and kitchen appliances are usually safe.</li>
+                    <li>Avoid resting tools like electric drills against the chest.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>🔍 3. Regular Device Monitoring</h3>
+        <p>Patients should have regular follow-ups (typically every 6-12 months) to:</p>
+        <ul>
+            <li>Check battery status.</li>
+            <li>Evaluate lead integrity.</li>
+            <li>Ensure proper sensing and pacing thresholds.</li>
+            <li>Update device programming if needed.</li>
+        </ul>
+        <p>Many modern pacemakers have remote monitoring:</p>
+        <ul>
+            <li>Wireless data transmission to the doctor.</li>
+            <li>Early detection of malfunctions.</li>
+        </ul>
+        
+        <h3>🔌 4. Electrical Safety Design Features in Pacemakers</h3>
+        <p>Pacemakers have built-in safety mechanisms, such as:</p>
+        <ul>
+            <li>Shielding and filtering circuits to block EMI.</li>
+            <li>Hermetically sealed titanium casing to resist moisture and corrosion.</li>
+            <li>Noise reversion modes that automatically switch the pacemaker to a safe operating mode when interference is detected.</li>
+            <li>Rate adaptive features that prevent false sensing from muscle signals or external noise.</li>
+        </ul>
+        
+        <!-- <img src="{{ url_for('static', filename='1.png') }}" alt="Electrical Safety" class="diagram"> -->
+        <img src="{{ url_for('static', filename='1.png') }}" 
+        alt="Safety Testing" 
+        class="diagram" 
+        onclick="openModal('modal-img', this.src)">
+
+   <!-- Modal Structure -->
+   <div id="modal-img" class="modal hidden">
+       <span class="close" onclick="closeModal('modal-img')">&times;</span>
+       <img class="modal-content" id="modal-content-img">
+   </div>
+    </section>
+
+    <section id="standards">
+        <h2>⚖ 3. Regulatory and Safety Standards (Detailed Explanation)</h2>
+        <p>Pacemakers are critical, life-supporting medical devices — so they are subject to strict regulatory control and international standards to guarantee safety, quality, and performance.</p>
+        <p>Without these standards, there would be a high risk of device failures, patient harm, or ineffective treatment.</p>
+        
+        <h3>🌎 1. Regulatory Bodies</h3>
+        <ul>
+            <li><strong>FDA (U.S. Food and Drug Administration, USA):</strong>
+                <ul>
+                    <li>Oversees the approval, manufacturing, and post-market surveillance of medical devices in the United States.</li>
+                    <li>Pacemakers are classified as Class III devices (highest risk category).</li>
+                    <li>They must undergo Pre-Market Approval (PMA) before reaching patients.</li>
+                    <li>The FDA monitors adverse events and can issue recalls if needed.</li>
+                </ul>
+            </li>
+            <li><strong>CE Marking (European Economic Area):</strong>
+                <ul>
+                    <li>Indicates that a pacemaker meets EU safety, health, and environmental protection standards.</li>
+                    <li>Devices must comply with Medical Device Regulation (MDR, EU 2017/745).</li>
+                    <li>CE marking allows free marketing across EU countries.</li>
+                </ul>
+            </li>
+            <li><strong>Other countries have their own regulatory bodies:</strong>
+                <ul>
+                    <li><strong>Japan:</strong> PMDA (Pharmaceuticals and Medical Devices Agency)</li>
+                    <li><strong>India:</strong> CDSCO (Central Drugs Standard Control Organization)</li>
+                    <li><strong>Australia:</strong> TGA (Therapeutic Goods Administration)</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>📏 2. International Standards</h3>
+        <p>To ensure consistency and safety across manufacturers and countries, international standards are followed:</p>
+        <ul>
+            <li><strong>ISO 14708:</strong>
+                <ul>
+                    <li><strong>Title:</strong> Implants for surgery — Active implantable medical devices</li>
+                    <li>Covers general requirements for performance, safety, and testing of active implants like pacemakers.</li>
+                    <li>Includes aspects like:
+                        <ul>
+                            <li>Mechanical strength and durability</li>
+                            <li>Biocompatibility of materials</li>
+                            <li>Electromagnetic compatibility (resistance to EMI)</li>
+                            <li>Sterilization and packaging requirements</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>IEC 60601-1:</strong>
+                <ul>
+                    <li>Standard for electrical safety and performance of medical electrical equipment.</li>
+                    <li>Ensures the device withstands power surges, leakage currents, and electromagnetic disturbances.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>🏥 3. Key Safety Areas Covered by Standards</h3>
+        <ul>
+            <li><strong>Biocompatibility:</strong> Materials must not cause allergic reactions, toxicity, or inflammation.</li>
+            <li><strong>Electrical safety:</strong> Devices must resist EMI, have appropriate insulation, and operate safely under all conditions.</li>
+            <li><strong>Battery and lead reliability:</strong> Standards specify minimum battery life, lead flexibility, and break resistance.</li>
+            <li><strong>Software safety:</strong> For modern pacemakers with programmable functions, software must be validated to prevent bugs or malfunctions.</li>
+            <li><strong>Clinical performance:</strong> Standards ensure devices effectively sense and pace heart rhythms across patient populations.</li>
+        </ul>
+        
+        <!-- <img src="https://www.heartrhythmjournal.com/cms/10.1016/j.hrthm.2023.03.1538/asset/93223f66-534d-4fd1-bbc8-70c28630f598/main.assets/gr1_lrg.jpg" alt="Regulatory Standards" class="diagram"> -->
+        <img src="https://www.heartrhythmjournal.com/cms/10.1016/j.hrthm.2023.03.1538/asset/93223f66-534d-4fd1-bbc8-70c28630f598/main.assets/gr1_lrg.jpg" 
+        alt="Safety Testing" 
+        class="diagram" 
+        onclick="openModal('modal-img', this.src)">
+   
+   <!-- Modal Structure -->
+   <div id="modal-img" class="modal hidden">
+       <span class="close" onclick="closeModal('modal-img')">&times;</span>
+       <img class="modal-content" id="modal-content-img">
+   </div>
+    </section>
+    <section>
+        <iframe
+        src="https://www.chatbase.co/chatbot-iframe/XYEEE874Eg4Y5EYTH0Mlp"
+        width="100%"
+        style="height: 30%; min-height: 400px"
+        frameborder="0"
+    ></iframe>
+    </section>
+    <section id="testing">
+        <h2>🧪 4. Safety Testing and Validation (Detailed Explanation)</h2>
+        <p>Before a pacemaker reaches patients, it must undergo extensive safety testing and validation to ensure it performs reliably over many years, even in challenging conditions.</p>
+        <p>These tests cover mechanical, electrical, software, and biological aspects of the device.</p>
+        
+        <h3>🔋 1. Battery Longevity Tests</h3>
+        <p><strong>Why it matters:</strong></p>
+        <p>A pacemaker battery typically lasts 5–15 years. Failure can lead to life-threatening heart rhythm problems.</p>
+        <p><strong>What’s tested:</strong></p>
+        <ul>
+            <li>Battery life under various pacing rates and loads.</li>
+            <li>Performance in extreme temperatures.</li>
+            <li>Shelf-life before implantation.</li>
+        </ul>
+        <p><strong>Methods:</strong></p>
+        <ul>
+            <li>Accelerated aging tests, real-time endurance testing, and chemical analysis.</li>
+        </ul>
+        
+        <h3>📡 2. Electromagnetic Interference (EMI) Resistance Tests</h3>
+        <p><strong>Why it matters:</strong></p>
+        <p>The pacemaker must resist electromagnetic disturbances from:</p>
+        <ul>
+            <li>Mobile phones.</li>
+            <li>Security systems.</li>
+            <li>MRI and CT machines (for MRI-conditional models).</li>
+            <li>Household appliances.</li>
+        </ul>
+        <p><strong>What’s tested:</strong></p>
+        <ul>
+            <li>Device behavior in simulated EMI environments.</li>
+            <li>Recovery after exposure.</li>
+            <li>Fail-safe mechanisms (e.g., switching to noise mode).</li>
+        </ul>
+        <p><strong>Standards followed:</strong></p>
+        <ul>
+            <li>IEC 60601-1-2, ISO 14708 EMI sections.</li>
+        </ul>
+        
+        <h3>🧵 3. Lead Strength and Fatigue Tests</h3>
+        <p><strong>Why it matters:</strong></p>
+        <p>Leads (wires connecting pacemaker to the heart) must endure continuous heart motion and patient movement.</p>
+        <p><strong>What’s tested:</strong></p>
+        <ul>
+            <li>Tensile strength (pulling force resistance).</li>
+            <li>Flexural fatigue (bending endurance over millions of cycles).</li>
+            <li>Insulation integrity (resistance to cracks, abrasion).</li>
+        </ul>
+        <p><strong>Methods:</strong></p>
+        <ul>
+            <li>Mechanical stress testing, simulated heart motion, and in-vitro bench testing.</li>
+        </ul>
+        
+        <h3>💻 4. Software and Signal Processing Validation</h3>
+        <p><strong>Why it matters:</strong></p>
+        <p>Pacemaker software controls:</p>
+        <ul>
+            <li>Heart sensing and pacing.</li>
+            <li>Rate responsiveness.</li>
+            <li>Diagnostic functions.</li>
+        </ul>
+        <p><strong>What’s tested:</strong></p>
+        <ul>
+            <li>Accuracy in detecting heart rhythms.</li>
+            <li>Correct delivery of pacing pulses.</li>
+            <li>Safe handling of signal artifacts and noise.</li>
+        </ul>
+        <p><strong>Methods:</strong></p>
+        <ul>
+            <li>Code verification, hardware-in-the-loop simulations, and clinical testing.</li>
+        </ul>
+        
+        <img src="https://www.ahajournals.org/cms/10.1161/CIR.0000000000001264/asset/fb9227b7-6583-4b4c-9204-eba4250c2746/assets/graphic/cir.0000000000001264.fig02.jpg" 
+        alt="Safety Testing" 
+        class="diagram" 
+        title="Click to view a larger version" 
+        onclick="openModal('modal-img', this.src)">
+        <span class="image-label">Click to enlarge</span>
+        <!-- <p class="image-caption">Click on the image to view a larger version.</p> -->
+   <!-- Modal Structure -->
+   <div id="modal-img" class="modal hidden">
+       <span class="close" onclick="closeModal('modal-img')">&times;</span>
+       <img class="modal-content" id="modal-content-img">
+   </div>
+   <!-- <p class="image-caption">Click on the image to view a larger version.</p> -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pacemaker Education Website</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
