@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Pacemaker Overview</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body>
     <header>
@@ -56,6 +56,7 @@
             </li>
         </ul>
         
+        
         <h3>⚙ Two Major Types of Pacemakers (Detailed)</h3>
         <h4>✅ 1. Single-Chamber Pacemaker</h4>
         <p><strong>Function:</strong> Stimulates one heart chamber — usually the right ventricle.</p>
@@ -94,7 +95,6 @@
              class="diagram" 
              onclick="openModal('modal-img', this.src)">
 
-        <!-- Modal Structure -->
         <div id="modal-img" class="modal hidden">
             <span class="close" onclick="closeModal('modal-img')">&times;</span>
             <img class="modal-content" id="modal-content-img">
@@ -129,26 +129,9 @@
         <h3>🛡 2. Patient Safety Guidelines</h3>
         <p><strong>To reduce the risk of electrical hazards:</strong></p>
         <ul>
-            <li><strong>Maintain distance from sources:</strong>
-                <ul>
-                    <li>Keep mobile phones at least 15-20 cm away from the device (use the opposite ear, avoid chest pockets).</li>
-                    <li>Walk steadily through security gates, don’t linger.</li>
-                    <li>Avoid standing close to high-voltage equipment or large magnetic fields.</li>
-                </ul>
-            </li>
-            <li><strong>Medical and dental procedures:</strong>
-                <ul>
-                    <li>Inform doctors and dentists about the pacemaker before procedures.</li>
-                    <li>MRI scans are contraindicated with older pacemakers; newer MRI-conditional models are safer but require careful planning.</li>
-                    <li>Electrosurgery tools (used in surgeries) may need special settings or precautions.</li>
-                </ul>
-            </li>
-            <li><strong>Home appliances:</strong>
-                <ul>
-                    <li>Modern microwaves, TVs, and kitchen appliances are usually safe.</li>
-                    <li>Avoid resting tools like electric drills against the chest.</li>
-                </ul>
-            </li>
+            <li><strong>Maintain distance from sources:</strong></li>
+            <li><strong>Medical and dental procedures:</strong></li>
+            <li><strong>Home appliances:</strong></li>
         </ul>
         
         <h3>🔍 3. Regular Device Monitoring</h3>
@@ -171,20 +154,17 @@
             <li>Shielding and filtering circuits to block EMI.</li>
             <li>Hermetically sealed titanium casing to resist moisture and corrosion.</li>
             <li>Noise reversion modes that automatically switch the pacemaker to a safe operating mode when interference is detected.</li>
-            <li>Rate adaptive features that prevent false sensing from muscle signals or external noise.</li>
         </ul>
         
-        <!-- <img src="{{ url_for('static', filename='1.png') }}" alt="Electrical Safety" class="diagram"> -->
-        <img src="{{ url_for('static', filename='1.png') }}" 
+        <img src="1.png" 
         alt="Safety Testing" 
         class="diagram" 
         onclick="openModal('modal-img', this.src)">
 
-   <!-- Modal Structure -->
-   <div id="modal-img" class="modal hidden">
-       <span class="close" onclick="closeModal('modal-img')">&times;</span>
-       <img class="modal-content" id="modal-content-img">
-   </div>
+        <div id="modal-img" class="modal hidden">
+            <span class="close" onclick="closeModal('modal-img')">&times;</span>
+            <img class="modal-content" id="modal-content-img">
+        </div>
     </section>
 
     <section id="standards">
@@ -263,15 +243,15 @@
        <span class="close" onclick="closeModal('modal-img')">&times;</span>
        <img class="modal-content" id="modal-content-img">
    </div>
-    </section>
-    <section>
-        <iframe
-        src="https://www.chatbase.co/chatbot-iframe/XYEEE874Eg4Y5EYTH0Mlp"
-        width="100%"
-        style="height: 30%; min-height: 400px"
-        frameborder="0"
-    ></iframe>
-    </section>
+   </section>
+   <section>
+    <iframe
+    src="https://www.chatbase.co/chatbot-iframe/XYEEE874Eg4Y5EYTH0Mlp"
+    width="100%"
+    style="height: 30%; min-height: 400px"
+    frameborder="0"
+></iframe>
+</section>
     <section id="testing">
         <h2>🧪 4. Safety Testing and Validation (Detailed Explanation)</h2>
         <p>Before a pacemaker reaches patients, it must undergo extensive safety testing and validation to ensure it performs reliably over many years, even in challenging conditions.</p>
@@ -356,13 +336,12 @@
        <span class="close" onclick="closeModal('modal-img')">&times;</span>
        <img class="modal-content" id="modal-content-img">
    </div>
-   <!-- <p class="image-caption">Click on the image to view a larger version.</p> -->
     </section>
 
     <footer>
-        <p>&copy; 2025 Pacemaker Education Website</p>
+        <p>&copy; 2023 Pacemaker Overview. All rights reserved.</p>
     </footer>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>
